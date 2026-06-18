@@ -1,6 +1,6 @@
 import type { RouteRecord } from '@/types';
 
-export interface ExportBundle {
+interface ExportBundle {
   version: number;
   exportedAt: string;
   routeCount: number;

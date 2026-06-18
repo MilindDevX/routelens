@@ -30,7 +30,7 @@ function buildExampleBody(params: RouteParam[]): string {
   return JSON.stringify(obj, null, 2);
 }
 
-export function generateCurl(route: RouteRecord): string {
+function generateCurl(route: RouteRecord): string {
   const path = substitutePathParams(route.path, route.params);
   const qs = buildQueryString(route.params);
   const url = `https://api.example.com${path}${qs}`;
@@ -44,7 +44,7 @@ export function generateCurl(route: RouteRecord): string {
   ${headerFlags.join(' \\\n  ')}${bodyFlag ? ' \\' : ''}${bodyFlag}`;
 }
 
-export function generateFetch(route: RouteRecord): string {
+function generateFetch(route: RouteRecord): string {
   const path = substitutePathParams(route.path, route.params);
   const qs = buildQueryString(route.params);
   const url = `https://api.example.com${path}${qs}`;
@@ -63,7 +63,7 @@ const data = await response.json();
 console.log(data);`;
 }
 
-export function generateAxios(route: RouteRecord): string {
+function generateAxios(route: RouteRecord): string {
   const path = substitutePathParams(route.path, route.params);
   const qs = buildQueryString(route.params);
   const url = `https://api.example.com${path}${qs}`;

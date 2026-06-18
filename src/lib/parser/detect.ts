@@ -1,6 +1,6 @@
 import yaml from 'js-yaml';
 
-export type DetectedFormat = 'json' | 'yaml';
+type DetectedFormat = 'json' | 'yaml';
 
 export interface DetectResult {
   format: DetectedFormat;

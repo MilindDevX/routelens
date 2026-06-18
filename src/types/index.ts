@@ -1,6 +1,6 @@
 // ─── Route Data Model ────────────────────────────────────────────────────────
 
-export type RouteSource = 'openapi' | 'quickadd' | 'url';
+type RouteSource = 'openapi' | 'quickadd' | 'url';
 
 export type HttpMethod =
   | 'GET'
@@ -38,13 +38,13 @@ export interface RouteRecord {
 
 // ─── Parse Results ────────────────────────────────────────────────────────────
 
-export interface ParseSuccess<T> {
+interface ParseSuccess<T> {
   ok: true;
   data: T;
   warnings: string[];
 }
 
-export interface ParseError {
+interface ParseError {
   ok: false;
   error: string;
   detail?: string;
@@ -87,7 +87,7 @@ export interface DiffScratch {
 }
 
 
-export const SCHEMA_VERSION = 1;
+
 
 export const STORAGE_KEYS = {
   ROUTES: 'rl_routes_v1',

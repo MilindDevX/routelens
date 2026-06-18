@@ -1,5 +1,7 @@
 # RouteLens — API Directory & Response Diff Tool
 
+**Live Application:** [https://routelens-xi.vercel.app/](https://routelens-xi.vercel.app/)
+
 **A fully client-side, zero-signup, zero-backend developer tool for managing and diffing API routes.**
 
 ---
