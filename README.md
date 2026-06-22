@@ -63,34 +63,7 @@ git push origin main
 
 ---
 
-## Pre-Submission Checklist
 
-| Requirement | Status | Where |
-|---|---|---|
-| Tool produces real, correct output — not a mock | ✅ | Parser runs against real OpenAPI specs; diff is live structural comparison |
-| "Built for Digital Heroes" button with exact label | ✅ | [`Navigation.tsx`](src/components/Navigation.tsx) — header, id=`built-for-digital-heroes` |
-| Links to `https://digitalheroesco.com` | ✅ | Same button + footer |
-| Name visible in footer | ✅ | [`layout.tsx`](src/app/layout.tsx) — "Built by Milind Bansal" |
-| Email visible in footer | ✅ | [`layout.tsx`](src/app/layout.tsx) — `milindsk8r@gmail.com` (mailto link) |
-| Builds on Vercel Hobby free plan | ✅ | Static export — zero serverless functions, zero paid add-ons |
-| No ads, popups, login flow | ✅ | Pure tool; no auth |
-| Zero outbound network calls at runtime | ✅ | No fetch/axios to any external domain; fonts via next/font (build-time only) |
-| No API keys or env vars required | ✅ | `npm install && npm run dev` — nothing else needed |
-| localStorage unavailable → graceful degradation | ✅ | [`StorageBanner.tsx`](src/components/StorageBanner.tsx) shown when storage check fails |
-| Parser degrades gracefully on bad `$ref` | ✅ | External refs show warning banner, not a crash |
-| Diff handles malformed/non-JSON input | ✅ | [`parseJsonSafe`](src/lib/diff.ts) returns typed error, textarea shows inline error |
-| Diff handles type changes (string→number) | ✅ | `type-changed` status with orange chip + both types shown |
-| Diff handles reordered arrays | ✅ | Identity-key matching in [`diff.ts`](src/lib/diff.ts); positional fallback with note |
-| Code clean enough for public GitHub repo | ✅ | Typed, documented, zero `any`, all files under 300 lines |
-| `npm run build` passes with 0 errors | ✅ | Verified; 3 app routes, no TypeScript errors |
-
----
-
-## Submission Sentence
-
-> RouteLens is a fully client-side, zero-backend developer tool that parses any OpenAPI/Swagger spec into a searchable route directory and structurally diffs two JSON API responses to instantly highlight what changed — built with Next.js 14, TypeScript, and Tailwind CSS, deployable to Vercel Hobby with no configuration.
-
----
 
 Built by **Milind Bansal** · [milindsk8r@gmail.com](mailto:milindsk8r@gmail.com)  
 Built for **Digital Heroes** · [digitalheroesco.com](https://digitalheroesco.com)
