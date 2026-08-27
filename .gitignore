@@ -32,3 +32,7 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+.ai-workflow/
+.agent/
+.agents/
+Agent_Outputs/
